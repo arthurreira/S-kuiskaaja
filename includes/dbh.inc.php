@@ -4,7 +4,7 @@
 
 $host = "localhost";
 $dbusername = "root";
-$dbname ="chefboksi";
+$dbname ="dht11";
 $dbpassword = "";
 
 
