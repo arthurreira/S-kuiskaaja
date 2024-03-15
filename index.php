@@ -1,3 +1,10 @@
+<?php
+require_once 'config_session.inc.php';
+require_once 'dbh.inc.php';
+var_dump($_POST);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,9 +27,16 @@
   <!-- Display temperature here -->
   <h1 id="temperature">Temperature: Loading...</h1>
 
+  <form action="receive_data.php" method="GET">
+
+    <button class="btn" type="submit" name="wheater">
+        wheater
+    </button>
+
+  </form>
   <!-- MDB -->
   <script type="text/javascript" src="js/mdb.umd.min.js"></script>
-  
+
 
 
 
@@ -35,7 +49,7 @@
       // Make an AJAX request to the PHP script
       var xhr = new XMLHttpRequest();
       xhr.open("GET", "includes/receive_data.php", true);
-      xhr.onreadystatechange = function () {
+      xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
           // Update the HTML content with the received temperature data
           document.getElementById("temperature").innerHTML = "Temperature: " + xhr.responseText + " °C";
