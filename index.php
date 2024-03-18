@@ -32,7 +32,7 @@ require_once 'dbh.inc.php';
   <header>
     <nav class="navbar navbar-expand-lg navbar-danger fixed-bottom">
       <div class="container-fluid">
-        <button type="button" class="btn btn-warning bnt-lg btn-rounded " data-mdb-toggle="modal" data-mdb-target="#exampleModal" data-mdb-ripple-color="#ffffff">Luokka 12 
+        <button type="button" class="btn btn-warning bnt-lg btn-rounded " data-mdb-toggle="modal" data-mdb-target="#exampleModal" data-mdb-ripple-color="#ffffff">Luokka 12
           <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
         </button>
       </div>
@@ -40,7 +40,8 @@ require_once 'dbh.inc.php';
   </header>
 
   <!--Section: Design Block-->
-  <?php require_once 'Front-end-components/home.php';?>
+  <?php require_once 'Front-end-components/home.php'; ?>
+  <?php require_once 'Front-end-components/basicwheater.php'; ?>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
