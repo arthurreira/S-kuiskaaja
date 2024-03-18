@@ -74,6 +74,7 @@ void loop() {
   String data = "temperature=" + String(temperature) + "&humidity=" + String(humidity) + "&pressure=" + String(pressure) + "&altitude=" + String(altitude);
 
 
+
   Serial.print("Sending data: ");
   Serial.println(data);
 
@@ -102,5 +103,5 @@ void loop() {
 
   http.end();
 
-  delay(10000);  // Wait for 10 seconds before sending the next request
+  delay(1000);  // Wait for 10 seconds before sending the next request
 }
