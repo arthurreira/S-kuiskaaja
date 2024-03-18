@@ -1,7 +1,7 @@
 <?php
 require_once 'dbh.inc.php';
 require_once 'wheater-model.php';
-$sensorData = getSensorData($conn);
+$sensorData = getSensorDatabyDate($conn);
 ?>
 
 <section class="vh-100" style="background-color: #cdc4f9;">
@@ -11,19 +11,16 @@ $sensorData = getSensorData($conn);
         <div class="card shadow-0 border border-dark border-5 text-dark" style="border-radius: 10px;">
           <div class="card-body p-4">
             <div class="row text-center">
-              <?php foreach ($sensorData as $data): ?>
-                <div class="col-md-9 border-end border-5 border-dark py-4">
-                  <div class="d-flex justify-content-around mt-3">
-                    <p class="small">Temperature: <?php echo $data['lampo']; ?>°C</p>
-                    <p class="small">Humidity: <?php echo $data['kosteus']; ?>%</p>
-                    <p class="small">Pressure: <?php echo $data['paine']; ?>hPa</p>
-                    <p class="small">Altitude: <?php echo $data['korkeus']; ?>m</p>
-                    <p class="small">Date: <?php echo $data['pvm']; ?></p>
-                  </div>
+              <div class="col-md-9 border-end border-5 border-dark py-4">
+                <div class="d-flex justify-content-around mt-3">
+                  <p class="small">Temperature: <?= $sensorData['lampo'] ?>°C</p>
+                  <p class="small">Humidity: <?= $sensorData['kosteus'] ?>%</p>
+                  <p class="small">Pressure: <?= $sensorData['paine'] ?>hPa</p>
+                  <p class="small">Altitude: <?= $sensorData['korkeus'] ?>m</p>
                 </div>
-              <?php endforeach; ?>
+              </div>
               <div class="col-md-3">
-                <!-- Additional content for the third column -->
+                <p class="small">Date: <?= $sensorData['pvm'] ?></p>
               </div>
             </div>
           </div>

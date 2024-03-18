@@ -1,7 +1,4 @@
 <?php
-
-
-
 $host = "localhost";
 $dbusername = "root";
 $dbname ="sensori";

@@ -4,8 +4,9 @@
 #include <Adafruit_BME280.h>
 #include <Wire.h>
 
-const char* ssid = "ONEBYTE-2G-2530";      // Enter your WiFi SSID here
-const char* password = "Koira666";         // Enter your WiFi password here
+
+const char* ssid = "TVT-WLAN";      // Enter your WiFi SSID here
+const char* password = "salasana";  // Enter your WiFi password here
 
 // BME280 Sensor
 #define BME_SDA 23
@@ -14,7 +15,7 @@ const char* password = "Koira666";         // Enter your WiFi password here
 
 Adafruit_BME280 bme;
 
-const char* serverIP = "192.168.1.109";   // Use the IP of your WAMP server
+const char* serverIP = "10.124.12.95";   // Use the IP of your WAMP server
 const char* endpoint = "/Weather-app-IOT/insert_data.php";  // Endpoint for the PHP script
 
 #define LED_PIN 13  // LED pin
@@ -103,5 +104,5 @@ void loop() {
 
   http.end();
 
-  delay(1000);  // Wait for 10 seconds before sending the next request
+  delay(10000);  // Wait for 10 seconds before sending the next request
 }

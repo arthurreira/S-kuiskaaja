@@ -39,3 +39,30 @@ function getSensorDatabyDate($conn) {
     // Return the sensor data
     return $sensorData;
 }
+
+
+function getLatestSensorData($pdo) {
+    try {
+        // Prepare SQL query to fetch the latest sensor data
+        $sql = "SELECT lampo, kosteus, paine, korkeus, pvm FROM sensordata ORDER BY pvm DESC LIMIT 1";
+        $stmt = $pdo->prepare($sql);
+        
+        // Execute the query
+        $stmt->execute();
+        
+        // Fetch the latest sensor data as an associative array
+        $latestSensorData = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        // Close the cursor
+        $stmt->closeCursor();
+        
+        // Return the latest sensor data
+        return $latestSensorData;
+    } catch (PDOException $e) {
+        // Handle database errors
+        echo "Error: " . $e->getMessage();
+        return array(); // Return empty array in case of error
+    }
+}
+
+
