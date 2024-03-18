@@ -13,7 +13,7 @@ $sensorData = getSensorDatabyDate($conn);
           <div class="card-header p-4 border-0">
             <div class="text-center mb-3">
               <p class="h2 mb-1 text-black fw-bolder" id="wrapper-name">Sääkuiskaaja Weather</p>
-              <div id="digital-clock" class="text-center   text-danger fw-bold"></div>
+              <div class="text-center  text-danger "></div>
 
               <div class="d-flex justify-content-around  text-dark mt-3">
                 <p class="small fw-bolder">Temperature: <?php echo $sensorData['lampo']; ?>°C</p>
@@ -25,7 +25,7 @@ $sensorData = getSensorDatabyDate($conn);
               <!-- Display temperature -->
               <p class="display-2 mb-1 text-black" id="wrapper-temp"><?php echo $sensorData['lampo']; ?>°C</p>
               <!-- Display pressure and humidity -->
-              <span class=" text-black">Pressure: <span class="text-black" id="wrapper-pressure"><?php echo $sensorData['paine']; ?>hPa</span></span>
+              <span class=" text-black ">Pressure: <span class="text-black" id="wrapper-pressure"><?php echo $sensorData['paine']; ?>hPa</span></span>
               <span class="mx-2 text-black">|</span>
               <span class=" text-black">Humidity: <span class="text-black" id="wrapper-humidity"><?php echo $sensorData['kosteus']; ?>%</span></span>
             </div>
@@ -34,16 +34,20 @@ $sensorData = getSensorDatabyDate($conn);
           <div class="card-body px-5">
             <div class="row align-items-center">
               <div class="col-lg-6 text-black">
-                <strong>Today</strong>
+                <div class="row">
+                  <strong>Today</strong>
+                  <span id="wrapper-forecast-temp-today"><?php echo $sensorData['pvm']; ?></span>
+                </div>
               </div>
 
               <div class="col-lg-2 text-center text-black">
+                
                 <i class="fas fa-cloud fa-7x  " style="color: #7999cd"></i>
               </div>
 
-              <div class="col-lg-4 text-end text-black">
-                <!-- Display the date here -->
-                <span id="wrapper-forecast-temp-today"><?php echo $sensorData['pvm']; ?></span>
+              <div class="col-lg-4 text-end text-danger fw-bolder">
+               <span id="digital-clock"  ></span>
+               
               </div>
             </div>
           </div>
@@ -54,19 +58,6 @@ $sensorData = getSensorDatabyDate($conn);
 </section>
 
 <script>
-  // Function to update the content of the marquee with weather and current date
-  function updateMarquee(weatherData) {
-    // Get the current date and time
-    const currentDate = new Date();
-    const currentDateTimeString = currentDate.toLocaleString();
-
-    // Construct the string to be displayed in the marquee
-    const marqueeContent = `Weather: ${weatherData.temperature}°C, Pressure: ${weatherData.pressure}hPa, Humidity: ${weatherData.humidity}%, Current Date and Time: ${currentDateTimeString}`;
-
-    // Update the content of the marquee
-    document.getElementById('weather-marquee').textContent = marqueeContent;
-  }
-
   // Function to update the digital clock
   function updateClock() {
     const now = new Date();
@@ -82,7 +73,7 @@ $sensorData = getSensorDatabyDate($conn);
 
   // Function to update weather data
   function updateWeather() {
-    // AJAX call to fetch updated weather data from the server
+    // Fetch updated weather data from the server
     fetch('receive_data.php')
       .then(response => response.json())
       .then(data => {
