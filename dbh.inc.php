@@ -4,7 +4,7 @@
 
 $host = "localhost";
 $dbusername = "root";
-$dbname ="dht11";
+$dbname ="sensori";
 $dbpassword = "";
 
 
