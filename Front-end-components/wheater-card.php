@@ -4,7 +4,7 @@ require_once 'wheater-model.php';
 $sensorData = getSensorDatabyDate($conn);
 ?>
 
-<section class="vh-100 my-5" style="background-image: url('img/clouds.gif');">
+<section class="vh-100 p-5 my-5" style="background-image: url('img/clouds.gif');">
   <div class="container py-5">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-7 col-xl-5">
@@ -12,23 +12,24 @@ $sensorData = getSensorDatabyDate($conn);
           <!-- Main current data -->
           <div class="card-header p-4 border-0">
             <div class="text-center mb-3">
-              <p class="h2 mb-1 text-black" id="wrapper-name">Sääkuiskaaja Weather</p>
+              <p class="h2 mb-1 text-black fw-bolder" id="wrapper-name">Sääkuiskaaja Weather</p>
+              <div id="digital-clock" class="text-center   text-danger fw-bold"></div>
+
+              <div class="d-flex justify-content-around  text-dark mt-3">
+                <p class="small fw-bolder">Temperature: <?php echo $sensorData['lampo']; ?>°C</p>
+                <p class="small fw-bolder">Humidity: <?php echo $sensorData['kosteus']; ?>%</p>
+                <p class="small fw-bolder">Pressure: <?php echo $sensorData['paine']; ?>hPa</p>
+                <p class="small fw-bolder">Altitude: <?php echo $sensorData['korkeus']; ?>m</p>
+                <p class="small fw-bolder">Date: <?php echo $sensorData['pvm']; ?></p>
+              </div>
               <!-- Display temperature -->
-              <p class="display-1 mb-1 text-black" id="wrapper-temp"><?php echo $sensorData['lampo']; ?>°C</p>
+              <p class="display-2 mb-1 text-black" id="wrapper-temp"><?php echo $sensorData['lampo']; ?>°C</p>
               <!-- Display pressure and humidity -->
               <span class=" text-black">Pressure: <span class="text-black" id="wrapper-pressure"><?php echo $sensorData['paine']; ?>hPa</span></span>
               <span class="mx-2 text-black">|</span>
               <span class=" text-black">Humidity: <span class="text-black" id="wrapper-humidity"><?php echo $sensorData['kosteus']; ?>%</span></span>
             </div>
           </div>
-
-          <!-- Hourly forecast -->
-          <div class="card-body p-4 border-top border-bottom mb-2">
-            <div class="row text-center text-black">
-              <marquee behavior="scroll" direction="left" id="weather-marquee">Weather</marquee>
-            </div>
-          </div>
-
           <!-- Daily forecast -->
           <div class="card-body px-5">
             <div class="row align-items-center">
@@ -66,6 +67,19 @@ $sensorData = getSensorDatabyDate($conn);
     document.getElementById('weather-marquee').textContent = marqueeContent;
   }
 
+  // Function to update the digital clock
+  function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('digital-clock').textContent = timeString;
+  }
+
+  // Update the clock every second
+  setInterval(updateClock, 1000);
+
   // Function to update weather data
   function updateWeather() {
     // AJAX call to fetch updated weather data from the server
@@ -77,6 +91,9 @@ $sensorData = getSensorDatabyDate($conn);
         document.getElementById('wrapper-pressure').innerText = data.paine + 'hPa';
         document.getElementById('wrapper-humidity').innerText = data.kosteus + '%';
         document.getElementById('wrapper-forecast-temp-today').innerText = data.pvm;
+
+        // Update the marquee with weather and current date
+        updateMarquee(data);
       })
       .catch(error => console.error('Error fetching data:', error));
   }
