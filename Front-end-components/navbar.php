@@ -2,9 +2,10 @@
 
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-scroll mb-5">
+<nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bolder text-center" href="#!">Sääkuiskaaja</a>
+        <a class="navbar-brand fw-bold text-black text-center" href="#!">Sääkuiskaaja</a>
+        <a class=" navbar-brand fw-bolder text-center  "><i class="fab fa-github"></i></a>
         <a class=" navbar-brand fw-bolder text-center  " id="digital-clock"></a>
         <!-- Clock -->
 
@@ -33,11 +34,7 @@
                         <i class="fab fa-github"></i>
                     </a>
                 </li>
-                <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link" href="#!">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
+                
             </ul>
         </div>
     </div>

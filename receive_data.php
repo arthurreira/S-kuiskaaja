@@ -1,5 +1,5 @@
 <?php
-require_once 'dbh.inc.php';
+require_once 'dbh.inc.mbe280.php';
 require_once 'weather-model.php';
 
 // Fetch latest sensor data from the database

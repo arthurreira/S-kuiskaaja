@@ -1,6 +1,5 @@
 <?php
 require_once 'config_session.inc.php';
-require_once 'dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -28,20 +27,11 @@ require_once 'dbh.inc.php';
 <body>
 
   <?php require_once '../Weather-app-IOT/Front-end-components/navbar.php'; ?>
-  <!-- MDB Header with Button Group Inline -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-danger fixed-bottom">
-      <div class="container-fluid">
-        <button type="button" class="btn btn-warning bnt-lg btn-rounded " data-mdb-toggle="modal" data-mdb-target="#exampleModal" data-mdb-ripple-color="#ffffff">Luokka 12
-          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        </button>
-      </div>
-    </nav>
-  </header>
+
+
 
   <!--Section: Design Block-->
   <?php require_once 'Front-end-components/home.php'; ?>
-  <?php require_once 'Front-end-components/basicwheater.php'; ?>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

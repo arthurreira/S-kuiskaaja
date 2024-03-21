@@ -1,7 +1,9 @@
 <?php
-require_once 'dbh.inc.php';
-require_once 'wheater-model.php';
-$sensorData = getSensorDatabyDate($conn);
+require_once 'dbh.inc.mbe280.php'; // Include your database connection file
+require_once 'wheater-model.php'; // Include the file containing your getLatestSensorData function
+
+// Get the latest sensor data using the function
+$sensorDatabme280 = getLatestSensorDatabme280($conn); // Assuming $conn is your PDO connection object
 ?>
 
 <section class="vh-100" style="background-color: #cdc4f9;">
@@ -13,14 +15,14 @@ $sensorData = getSensorDatabyDate($conn);
             <div class="row text-center">
               <div class="col-md-9 border-end border-5 border-dark py-4">
                 <div class="d-flex justify-content-around mt-3">
-                  <p class="small">Temperature: <?= $sensorData['lampo'] ?>°C</p>
-                  <p class="small">Humidity: <?= $sensorData['kosteus'] ?>%</p>
-                  <p class="small">Pressure: <?= $sensorData['paine'] ?>hPa</p>
-                  <p class="small">Altitude: <?= $sensorData['korkeus'] ?>m</p>
+                  <p class="small">Temperature: <?= $sensorDatabme280['lampo'] ?>°C</p>
+                  <p class="small">Humidity: <?= $sensorDatabme280['kosteus'] ?>%</p>
+                  <p class="small">Pressure: <?= $sensorDatabme280['paine'] ?>hPa</p>
+                  <p class="small">Altitude: <?= $sensorDatabme280['korkeus'] ?>m</p>
                 </div>
               </div>
               <div class="col-md-3">
-                <p class="small">Date: <?= $sensorData['pvm'] ?></p>
+                <p class="small">Date: <?= $sensorDatabme280['pvm'] ?></p>
               </div>
             </div>
           </div>
