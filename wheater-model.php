@@ -41,11 +41,60 @@ function getSensorDatabyDate($conn) {
 }
 
 
-function getLatestSensorData($pdo) {
+function getLatestSensorData($conn) {
     try {
         // Prepare SQL query to fetch the latest sensor data
         $sql = "SELECT lampo, kosteus, paine, korkeus, pvm FROM sensordata ORDER BY pvm DESC LIMIT 1";
-        $stmt = $pdo->prepare($sql);
+        $stmt = $conn->prepare($sql);
+        
+        // Execute the query
+        $stmt->execute();
+        
+        // Fetch the latest sensor data as an associative array
+        $latestSensorData = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        // Close the cursor
+        $stmt->closeCursor();
+        
+        // Return the latest sensor data
+        return $latestSensorData;
+    } catch (PDOException $e) {
+        // Handle database errors
+        echo "Error: " . $e->getMessage();
+        return array(); // Return empty array in case of error
+    }
+}
+
+
+function getLatestSensorDatadht11($conn) {
+    try {
+        // Prepare SQL query to fetch the latest sensor data
+        $sql = "SELECT lampo, kosteus,pvm FROM sensor LIMIT 1";
+        $stmt = $conn->prepare($sql);
+        
+        // Execute the query
+        $stmt->execute();
+        
+        // Fetch the latest sensor data as an associative array
+        $latestSensorData = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        // Close the cursor
+        $stmt->closeCursor();
+        
+        // Return the latest sensor data
+        return $latestSensorData;
+    } catch (PDOException $e) {
+        // Handle database errors
+        echo "Error: " . $e->getMessage();
+        return array(); // Return empty array in case of error
+    }
+}
+
+function getLatestSensorDatabme280($conn) {
+    try {
+        // Prepare SQL query to fetch the latest sensor data
+        $sql = "SELECT lampo, kosteus, paine, korkeus, pvm FROM sensordata LIMIT 1";
+        $stmt = $conn->prepare($sql);
         
         // Execute the query
         $stmt->execute();

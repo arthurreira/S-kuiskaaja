@@ -1,7 +1,7 @@
 <?php
 // Check if any data is received in the POST request
 if (!empty($_POST)) {
-    require_once 'dbh.inc.php';
+    require_once 'dbh.inc.mbe280.php';
     // Extract data from the POST request
     $temperature = $_POST['temperature'];
     $humidity = $_POST['humidity'];

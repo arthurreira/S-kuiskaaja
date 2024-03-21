@@ -1,9 +1,9 @@
 <?php
-require_once 'dbh.inc.php'; // Include your database connection file
+require_once 'dbh.inc.mbe280.php'; // Include your database connection file
 require_once 'wheater-model.php'; // Include the file containing your getLatestSensorData function
 
 // Get the latest sensor data using the function
-$sensorData = getLatestSensorData($conn); // Assuming $pdo is your PDO connection object
+$sensorDatabme280 = getLatestSensorData($conn); // Assuming $pdo is your PDO connection object
 ?>
 
 <link rel="stylesheet" href="/Css/style.css">
@@ -24,13 +24,13 @@ $sensorData = getLatestSensorData($conn); // Assuming $pdo is your PDO connectio
           <div class="card-header  border-0">
             <div class="text-center mb-3">
               <div class="row d-flex justify-content-around text-dark mt-3">
-                <p class="fw-bold fs-2">Lämpötila: <span class="text-success fw-bolder" id="temp"><?= $sensorData['lampo'] ?>°C</span></p>
-                <p class="fw-bolder fs-2">Ilmankosteus: <span class="text-success fw-bolder" id="humidity"><?= $sensorData['kosteus']; ?>%</span></p>
-                <p class="fw-bolder fs-2">Ilmanpaine: <span class="text-success fw-bolder" id="pressure"><?= $sensorData['paine'] ?>hPa</span></p>
-                <p class="fw-bolder fs-2">Korkeus: <span class="text-success fw-bolder" id="altitude"><?= $sensorData['korkeus'] ?>m</span></p>
+                <p class="fw-bold fs-2">Lämpötila: <span class="text-success fw-bolder" id="temp"><?= $sensorDatabme280['lampo'] ?>°C</span></p>
+                <p class="fw-bolder fs-2">Ilmankosteus: <span class="text-success fw-bolder" id="humidity"><?= $sensorDatabme280['kosteus']; ?>%</span></p>
+                <p class="fw-bolder fs-2">Ilmanpaine: <span class="text-success fw-bolder" id="pressure"><?= $sensorDatabme280['paine'] ?>hPa</span></p>
+                <p class="fw-bolder fs-2">Korkeus: <span class="text-success fw-bolder" id="altitude"><?= $sensorDatabme280['korkeus'] ?>m</span></p>
               </div>
               <!-- Display temperature -->
-              <p class="display-2 fw-bolder mb-1 text-white" id="wrapper-temp"><?= $sensorData['lampo'] ?>°C</p>
+              <p class="display-2 fw-bolder mb-1 text-white" id="wrapper-temp"><?= $sensorDatabme280['lampo'] ?>°C</p>
             </div>
           </div>
           <!-- Daily forecast -->
@@ -39,7 +39,7 @@ $sensorData = getLatestSensorData($conn); // Assuming $pdo is your PDO connectio
               <div class="col-lg-6 text-black">
                 <div class="row">
                   <strong class="text-danger">Viimeks pävitetty </strong>
-                  <span id="wrapper-forecast-temp-today" class="text-warning fw-bold"><?= $sensorData['pvm'] ?></span>
+                  <span id="wrapper-forecast-temp-today" class="text-warning fw-bold"><?= $sensorDatabme280['pvm'] ?></span>
                 </div>
               </div>
             </div>
@@ -48,9 +48,9 @@ $sensorData = getLatestSensorData($conn); // Assuming $pdo is your PDO connectio
             <div class="row align-items-center">
               <div class="col-lg-6 text-black">
                 <!-- Display pressure and humidity -->
-                <span class="text-white">Ilmanpaine: <span class="text-white" id="wrapper-pressure"><?= $sensorData['paine'] ?>hPa</span></span>
+                <span class="text-white">Ilmanpaine: <span class="text-white" id="wrapper-pressure"><?= $sensorDatabme280['paine'] ?>hPa</span></span>
                 <span class="mx-2 text-white">|</span>
-                <span class="text-white">Ilmankosteus: <span class="text-white" id="wrapper-humidity"><?= $sensorData['kosteus'] ?>%</span></span>
+                <span class="text-white">Ilmankosteus: <span class="text-white" id="wrapper-humidity"><?= $sensorDatabme280['kosteus'] ?>%</span></span>
               </div>
             </div>
           </div>

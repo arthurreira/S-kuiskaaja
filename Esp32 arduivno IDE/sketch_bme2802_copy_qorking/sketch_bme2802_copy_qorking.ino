@@ -16,7 +16,7 @@ const char* password = "salasana";  // Enter your WiFi password here
 Adafruit_BME280 bme;
 
 const char* serverIP = "10.124.12.95";   // Use the IP of your WAMP server
-const char* endpoint = "/Weather-app-IOT/insert_data.php";  // Endpoint for the PHP script
+const char* endpoint = "/Weather-app-IOT/insert_data_bme280.php";  // Endpoint for the PHP script
 
 #define LED_PIN 13  // LED pin
 
