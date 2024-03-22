@@ -12,10 +12,15 @@ const char* password = "salasana";  // Enter your WiFi password here
 DHT dht(DHTPIN, DHTTYPE);
 
 const char* serverIP = "10.124.12.95";                       // Use the IP of your WAMP server
-const char* endpoint = "/Weather-app-IOT/insert_data.php";  // Endpoint for the PHP script
+const char* endpoint = "/Weather-app-IOT/insert_data_dht11.php";  // Endpoint for the PHP script
+
+
+#define LED_PIN 13  // LED pin
 
 void setup() {
   Serial.begin(115200);
+  pinMode(LED_PIN, OUTPUT); // Initialize LED pin
+
   pinMode(DHTPIN, INPUT);
   dht.begin();
 
@@ -44,7 +49,7 @@ void loop() {
   }
 
   // Construct the data string
-  String data = "&temperature=" + String(temperature) + "&humidity=" + String(humidity);
+  String data = "temperature=" + String(temperature) + "&humidity=" + String(humidity);
   Serial.print("Sending data: ");
   Serial.println(data);
 
@@ -64,5 +69,5 @@ void loop() {
 
   http.end();
 
-  delay(1000);  // Wait for 1 second before sending the next request
+  delay(10000);  // Wait for 1 second before sending the next request
 }

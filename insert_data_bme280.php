@@ -10,7 +10,7 @@ if (!empty($_POST)) {
 
 
     // Prepare SQL statement to insert sensor data
-    $sql = "INSERT INTO sensordata (lampo,kosteus, paine, korkeus) 
+    $sql = "INSERT INTO sensordata (lampo,kosteus, paine, korkeus,pvm) 
             VALUES (:temperature, :humidity, :pressure, :altitude)";
 
     try {
