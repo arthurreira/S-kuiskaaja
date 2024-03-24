@@ -4,9 +4,8 @@
 #include <Adafruit_BME280.h>
 #include <Wire.h>
 
-
-const char* ssid = "TVT-WLAN";      // Enter your WiFi SSID here
-const char* password = "salasana";  // Enter your WiFi password here
+const char* ssid = "mywifi";      // Enter your WiFi SSID here
+const char* password = "mypassword";  // Enter your WiFi password here
 
 // BME280 Sensor
 #define BME_SDA 23
@@ -15,7 +14,7 @@ const char* password = "salasana";  // Enter your WiFi password here
 
 Adafruit_BME280 bme;
 
-const char* serverIP = "10.124.12.95";   // Use the IP of your WAMP server
+const char* serverIP = "xxx.xxx.xxx.xxx";   // Use the IP of your WAMP server
 const char* endpoint = "/Weather-app-IOT/insert_data_bme280.php";  // Endpoint for the PHP script
 
 #define LED_PIN 13  // LED pin
