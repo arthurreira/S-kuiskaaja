@@ -25,19 +25,20 @@ Tervetuloa sääaseman IoT-projektin pariin, joka on toteutettu ESP32-mikrokontr
 - **MDB Bootstrap:** Projekti hyödyntää MDB Bootstrapia, joka on Bootstrap-pohjainen käyttöliittymäkomponenttikirjasto, varmistaakseen verkkosivun responsiivisen suunnittelun ja ammattimaisen ulkoasun.
 
 
-## Esimerkkikuvia
+## Sääaseman kuvat
 
 
-*Kuva 1: Sääaseman kuvat*
+*Kytkentä : *
 
 ![Kuva 1](Projektinkuvat/kytkentä.png)
+
 
 
 *Kuva 2: Verkkosivunäkymä*
 
 | LG                                  | MD                                  |
 | ----------------------------------- | ----------------------------------- |
-| ![LG ](Projektinkuvat/kuva5.png) | ![MD](Projektinkuvat/kuva6.png)  |
+| ![LG ](Projektinkuvat/prototype.jpg) | ![MD](Projektinkuvat/kuva6.png)  |
 
 
 
