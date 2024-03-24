@@ -35,17 +35,18 @@ Tervetuloa sääaseman IoT-projektin pariin, joka on toteutettu ESP32-mikrokontr
 ![Kuva 2](Projektinkuvat/kuva6.png)
 
 *Kuva 2: Verkkosivunäkymä*
+
+
+
+
+![Project Setup](Projektinkuvat/kuva6.jpg)
+
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
     ![Image 1](Projektinkuvat/kuva2.png)
     ![Image 2](Projektinkuvat/kuva3.png)
     ![Image 3](Projektinkuvat/kuva4.png)
     <!-- Add more images as needed -->
 </div>
-
-
-
-![Project Setup](Projektinkuvat/kuva6.jpg)
-
 ## Lisenssi
 
 Tämä projekti on lisensoitu [MIT-lisenssillä](LICENSE). Voit vapaasti käyttää ja muokata sitä omiin tarkoituksiisi.
