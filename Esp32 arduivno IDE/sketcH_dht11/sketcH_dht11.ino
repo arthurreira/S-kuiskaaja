@@ -2,8 +2,8 @@
 #include <HTTPClient.h>
 #include "DHT.h"
 
-const char* ssid = "TVT-WLAN";      // Enter your WiFi SSID here
-const char* password = "salasana";  // Enter your WiFi password here
+const char* ssid = "mywifi";      // Enter your WiFi SSID here
+const char* password = "mypassword";  // Enter your WiFi password here
 
 // DHT Sensor
 #define DHTPIN 5
@@ -11,7 +11,7 @@ const char* password = "salasana";  // Enter your WiFi password here
 
 DHT dht(DHTPIN, DHTTYPE);
 
-const char* serverIP = "10.124.12.95";                       // Use the IP of your WAMP server
+const char* serverIP = "xxx.xxx.xxx.xxx";                       // Use the IP of your WAMP server
 const char* endpoint = "/Weather-app-IOT/insert_data_dht11.php";  // Endpoint for the PHP script
 
 
