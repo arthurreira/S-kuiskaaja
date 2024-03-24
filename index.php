@@ -10,7 +10,7 @@ require_once 'config_session.inc.php';
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta http-equiv="refresh" content="10">
-  <title>Sääasema</title>
+  <title>Sääkuiskaaja</title>
   <!-- MDB icon -->
   <link rel="icon" href="img/wheater_cloud_sharp_focus_dept.jpeg" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
@@ -28,9 +28,7 @@ require_once 'config_session.inc.php';
 
   <?php require_once '../Weather-app-IOT/Front-end-components/navbar.php'; ?>
 
-
-
-  <!--Section: Design Block-->
+  
   <?php require_once 'Front-end-components/home.php'; ?>
 
 
