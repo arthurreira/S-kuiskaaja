@@ -30,8 +30,9 @@ Tervetuloa sääaseman IoT-projektin pariin, joka on toteutettu ESP32-mikrokontr
 
 *Kuva 1: Sääaseman kokoonpano*
 
+![Kuva 1](Projektinkuvat/kytkentä.png)
 ![Kuva 1](Projektinkuvat/kuva5.png)
-![Kuva 2](Projektinkuvat/kuva2.jpg)
+![Kuva 2](Projektinkuvat/kuva6.jpg)
 
 *Kuva 2: Verkkosivunäkymä*
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
