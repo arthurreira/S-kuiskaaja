@@ -41,9 +41,9 @@ Tervetuloa sääaseman IoT-projektin pariin, joka on toteutettu ESP32-mikrokontr
 | ----------------------------------- | ------------------------------------ | ------------------------------------ |
 | ![Prototyyppi](Projektinkuvat/prototype.png) | ![Valmis](Projektinkuvat/kuva6.png)  | ![Valmis](Projektinkuvat/kuva5.png) |
 
-
+|                            |                               |                               |
 | ----------------------------------- | ------------------------------------ | ------------------------------------ |
-| ![Prototyyppi](Projektinkuvat/esittely1.png) | ![Valmis](Projektinkuvat/esittely2.png)  | ![Valmis](Projektinkuvat/esittely1.png) |
+| ![Prototyyppi](Projektinkuvat/esittely1.png) | ![Valmis](Projektinkuvat/esittely 2.png)  | ![Valmis](Projektinkuvat/esittely1.png) |
 
 *Kuva 3: Verkkosivunäkymä*
 
