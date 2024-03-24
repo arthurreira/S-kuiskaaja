@@ -60,10 +60,8 @@ Tervetuloa sääaseman IoT-projektin pariin, joka on toteutettu ESP32-mikrokontr
 
 
 
-## Lisenssi
 
-Tämä projekti on lisensoitu [MIT-lisenssillä](LICENSE). Voit vapaasti käyttää ja muokata sitä omiin tarkoituksiisi.
 
 ## Yhteydenotto
 
-Jos sinulla on kysyttävää tai kommentteja, voit ottaa yhteyttä sähköpostitse osoitteeseen [email@example.com](mailto:email@example.com).
+Jos sinulla on kysyttävää tai kommentteja, voit ottaa yhteyttä sähköpostitse osoitteeseen [arthur.ferreiramiran@gmail.com].
