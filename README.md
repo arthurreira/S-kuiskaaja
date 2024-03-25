@@ -56,7 +56,7 @@ Tervetuloa sääaseman IoT-projektin pariin, joka on toteutettu ESP32-mikrokontr
 
 | LG                                  | MD                                  | SM                                          |
 | ----------------------------------- | ----------------------------------- | ------------------------------------------- |
-| ![LG](Projektinkuvat/verkkosivut/kuva1.png) | ![MD](Projektinkuvat/verkkosivut/Verkkosivu.png) | ![SM](Projektinkuvat/verkkosivut/Verkkosivu2.png) |
+| ![LG](Projektinkuvat/verkkosivut/kuva1.png) | ![MD](Projektinkuvat/verkkosivut/verkkosivu.png) | ![SM](Projektinkuvat/verkkosivut/verkkosivu2.png) |
 
 
 
